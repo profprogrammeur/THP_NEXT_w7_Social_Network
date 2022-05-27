@@ -3,10 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Home } from './components/Home'
 // import { About } from './components/About'
 import { Navbar } from './components/Navbar'
-import { OrderSummary } from './components/OrderSummary'
-import { NewProducts } from './components/NewProducts'
-import { FeaturedProducts } from './components/FeaturedProducts'
-import { Products } from './components/Products'
+
 import { NoMatch } from './components/NoMatch'
 import { Users } from './components/Users'
 import { UserDetails } from './components/UserDetails'
@@ -19,6 +16,9 @@ import store from './store/index'
 import {Provider} from 'react-redux'
 
 const LazyAbout = React.lazy(() => import('./components/About'))
+
+
+// localStorage.userName ? setUser(localStorage.userName) : setUser (user)
 
 function App() {
   return (

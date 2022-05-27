@@ -10,7 +10,7 @@ export const Profile = () => {
   }
   return (
     <div>
-      Welcome {auth.user}.<button onClick={handleLogout}>Logout</button>
+      <h3>HOLA !</h3><h4>{auth.user}</h4> <br></br><button onClick={handleLogout}>Logout</button>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { messagesReducer } from '../store/messagesReducer'
 function MessageItem ({message}) {
   return <li>
     <p>
-      <h3>{message.content}</h3> auteur : {message.author}
+      <h3>{message.content}</h3> auteur : {localStorage.userName == message.author? message.author : ""}
     </p>
     <br></br>
   </li>

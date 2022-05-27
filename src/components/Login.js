@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from './auth'
 
 export const Login = () => {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState("")
+  // useEffect(()=>{localStorage.userName=user})
   const navigate = useNavigate()
   const location = useLocation()
   const auth = useAuth()
@@ -11,6 +12,7 @@ export const Login = () => {
   const redirectPath = location.state?.path || '/'
 
   const handleLogin = () => {
+    localStorage.setItem('userName', user);
     auth.login(user)
     navigate(redirectPath, { replace: true })
   }
