@@ -2,12 +2,13 @@ import {combineReducers, createStore} from 'redux'
 import {messagesReducer} from './messagesReducer'
 
 
-const store = createStore(
+export default createStore(
   combineReducers({
-    messages: TodoReducer,
-    filter: (state=0, action) => state });
+    messages: messagesReducer,
+    filter: (state=0, action) => state 
+  })
   )
 
 
 
-  export default store
+ 

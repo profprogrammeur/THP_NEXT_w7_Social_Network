@@ -15,11 +15,14 @@ import { AuthProvider } from './components/auth'
 import { Login } from './components/Login'
 import { Profile } from './components/Profile'
 import { RequireAuth } from './components/RequireAuth'
+import store from './store/index' 
+import {Provider} from 'react-redux'
 
 const LazyAbout = React.lazy(() => import('./components/About'))
 
 function App() {
   return (
+    <Provider store={store}>
     <AuthProvider>
       <Navbar />
       <Routes>
@@ -55,6 +58,7 @@ function App() {
         <Route path='*' element={<NoMatch />} />
       </Routes>
     </AuthProvider>
+    </Provider>
   )
 }
 
